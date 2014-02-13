@@ -128,9 +128,9 @@ It is assumed that communications on the local network are secure. The main issu
 
 ### References: 
 
-[http://www.upnp.org/specs/arch/UPnP-arch-DeviceArchitecture-v1.1.pdf](http://www.upnp.org/specs/arch/UPnP-arch-DeviceArchitecture-v1.1.pdf)
-[http://en.wikipedia.org/wiki/Universal_Plug_and_Play](http://en.wikipedia.org/wiki/Universal_Plug_and_Play)
-[http://www.upnp.org/download/UPNP_understandingUPNP.doc](http://www.upnp.org/download/UPNP_understandingUPNP.doc)
+* [http://www.upnp.org/specs/arch/UPnP-arch-DeviceArchitecture-v1.1.pdf](http://www.upnp.org/specs/arch/UPnP-arch-DeviceArchitecture-v1.1.pdf)
+* [http://en.wikipedia.org/wiki/Universal_Plug_and_Play](http://en.wikipedia.org/wiki/Universal_Plug_and_Play)
+* [http://www.upnp.org/download/UPNP_understandingUPNP.doc](http://www.upnp.org/download/UPNP_understandingUPNP.doc)
 
 ## DNS-SD/mDNS 
 
@@ -163,7 +163,7 @@ The key difference to point out between UPnP and Zeroconf is that Zeroconf does 
 
 ### Reference
 
-[http://tools.ietf.org/html/rfc6763](http://tools.ietf.org/html/rfc6763)
+* [http://tools.ietf.org/html/rfc6763](http://tools.ietf.org/html/rfc6763)
 
 
 ## W3C Web intents
@@ -172,8 +172,8 @@ Currently discontinued: “The Web Intents Addendum defines how Web Intent may b
 
 ### Reference: 
 
-[http://www.w3.org/TR/webintents-local-services/](http://www.w3.org/TR/webintents-local-services/)
-[http://lists.w3.org/Archives/Public/public-device-apis/2013Mar/0023.html](http://lists.w3.org/Archives/Public/public-device-apis/2013Mar/0023.html)
+* [http://www.w3.org/TR/webintents-local-services/](http://www.w3.org/TR/webintents-local-services/)
+* [http://lists.w3.org/Archives/Public/public-device-apis/2013Mar/0023.html](http://lists.w3.org/Archives/Public/public-device-apis/2013Mar/0023.html)
 
 ## JavaScript discovery API
 
@@ -211,7 +211,7 @@ It contains some useful worked-through examples as Javascript.
 
 ### Reference
 
-[http://www.w3.org/TR/discovery-api/](http://www.w3.org/TR/discovery-api/) (Working Draft)
+* [http://www.w3.org/TR/discovery-api/](http://www.w3.org/TR/discovery-api/) (Working Draft)
 
 ## Webinos
 
@@ -245,7 +245,7 @@ Local proximity:
 
 ### Reference
 
-[http://www.webinos.org/content/html/D033/Architecture_Overview.htm](http://www.webinos.org/content/html/D033/Architecture_Overview.htm)
+* [http://www.webinos.org/content/html/D033/Architecture_Overview.htm](http://www.webinos.org/content/html/D033/Architecture_Overview.htm)
 
 ## IRT Second Screen Framework for HbbTV (FI-Content)
 
@@ -261,8 +261,8 @@ There doesn't appear to be any link with the TV programmes or channels.
 
 ### References
 
-[http://wiki.mediafi.org/doku.php/ficontent.socialtv.enabler.secondscreenframework](http://wiki.mediafi.org/doku.php/ficontent.socialtv.enabler.secondscreenframework)
-[http://www.youtube.com/watch?v=pAS5jgXlQnM](http://www.youtube.com/watch?v=pAS5jgXlQnM)
+* [http://wiki.mediafi.org/doku.php/ficontent.socialtv.enabler.secondscreenframework](http://wiki.mediafi.org/doku.php/ficontent.socialtv.enabler.secondscreenframework)
+* [http://www.youtube.com/watch?v=pAS5jgXlQnM](http://www.youtube.com/watch?v=pAS5jgXlQnM)
 
 ## RadioDNS / RadioTAG
 
@@ -277,9 +277,9 @@ RadioTAG is a pairing mechanism for an online account and a device (a radio). It
 
 ### References: 
 
-[http://radiodns.org/documentation/rdns01-1-0-0/](http://radiodns.org/documentation/rdns01-1-0-0/)
-[http://radiotag.prototyping.bbc.co.uk/docs/radiotag-api-proposal-v1.00.html](http://radiotag.prototyping.bbc.co.uk/docs/radiotag-api-proposal-v1.00.htm)
-[http://tools.ietf.org/html/draft-recordon-oauth-v2-device-00](http://tools.ietf.org/html/draft-recordon-oauth-v2-device-00)
+* [http://radiodns.org/documentation/rdns01-1-0-0/](http://radiodns.org/documentation/rdns01-1-0-0/)
+* [http://radiotag.prototyping.bbc.co.uk/docs/radiotag-api-proposal-v1.00.html](http://radiotag.prototyping.bbc.co.uk/docs/radiotag-api-proposal-v1.00.htm)
+* [http://tools.ietf.org/html/draft-recordon-oauth-v2-device-00](http://tools.ietf.org/html/draft-recordon-oauth-v2-device-00)
 
 ## Cross-Platform Authentication
 
@@ -301,8 +301,8 @@ The basic flow is:
 
 ### References
 
-[https://tech.ebu.ch/groups/CPA](https://tech.ebu.ch/groups/CPA)
-[https://github.com/ebu/cpa-spec/blob/draft-1.0/specification.md](https://github.com/ebu/cpa-spec/blob/draft-1.0/specification.md) (private github repo)
+* [https://tech.ebu.ch/groups/CPA](https://tech.ebu.ch/groups/CPA)
+* [https://github.com/ebu/cpa-spec/blob/draft-1.0/specification.md](https://github.com/ebu/cpa-spec/blob/draft-1.0/specification.md) (private github repo)
 
 ## Google TV Pairing Protocol
 
@@ -314,7 +314,7 @@ Essentially: there's an exchange of capabilities, then a secret is sent out of b
 
 ### Reference
 
-[https://developers.google.com/tv/remote/docs/pairing?csw=1](https://developers.google.com/tv/remote/docs/pairing?csw=1)
+* [https://developers.google.com/tv/remote/docs/pairing?csw=1](https://developers.google.com/tv/remote/docs/pairing?csw=1)
 
 ## Anymote Device discovery phase
 
@@ -324,8 +324,8 @@ Uses mDNS on the local network, with a known prefix
 
 ### References
 
-[https://developers.google.com/tv/remote/?csw=1](https://developers.google.com/tv/remote/?csw=1)
-[https://developers.google.com/tv/remote/docs/anymote](https://developers.google.com/tv/remote/docs/anymote)
+* [https://developers.google.com/tv/remote/?csw=1](https://developers.google.com/tv/remote/?csw=1)
+* [https://developers.google.com/tv/remote/docs/anymote](https://developers.google.com/tv/remote/docs/anymote)
 
 ## DIAL
 
@@ -341,16 +341,17 @@ Uses mDNS on the local network, with a known prefix
 
 ### References
 
-[http://www.dial-multiscreen.org/dial-protocol-specification](http://www.dial-multiscreen.org/dial-protocol-specification)
-[http://www.dial-multiscreen.org/dial-protocol-specification/DIAL-2ndScreenProtocol-1.6.4.pdf?attredirects=0&d=1](http://www.dial-multiscreen.org/dial-protocol-specification/DIAL-2ndScreenProtocol-1.6.4.pdf?attredirects=0&d=1)
-[http://upnp.org/specs/arch/UPnP-arch-DeviceArchitecture-v1.1.pdf](http://upnp.org/specs/arch/UPnP-arch-DeviceArchitecture-v1.1.pdf)
+* [http://www.dial-multiscreen.org/dial-protocol-specification](http://www.dial-multiscreen.org/dial-protocol-specification)
+* [http://www.dial-multiscreen.org/dial-protocol-specification/DIAL-2ndScreenProtocol-1.6.4.pdf?attredirects=0&d=1](http://www.dial-multiscreen.org/dial-protocol-specification/DIAL-2ndScreenProtocol-1.6.4.pdf?attredirects=0&d=1)
+* [http://upnp.org/specs/arch/UPnP-arch-DeviceArchitecture-v1.1.pdf](http://upnp.org/specs/arch/UPnP-arch-DeviceArchitecture-v1.1.pdf)
 
 ## Chromecast
 
 Chromecast uses DIAL for setup. You can see a walk-through of the whole process: [http://planb.nicecupoftea.org/2013/11/10/chromecast-setup/](http://planb.nicecupoftea.org/2013/11/10/chromecast-setup/)
 
 ### Reference
-[http://forum.xda-developers.com/showpost.php?p=48350742&postcount=2](http://forum.xda-developers.com/showpost.php?p=48350742&postcount=2)
+
+* [http://forum.xda-developers.com/showpost.php?p=48350742&postcount=2](http://forum.xda-developers.com/showpost.php?p=48350742&postcount=2)
 
 ## WebRTC
 
@@ -362,8 +363,8 @@ This is for video and audio chat within the browser. It doesn't have any explici
 
 ### References
 
-[http://www.webrtc.org/](http://www.webrtc.org/)
-[http://www.html5rocks.com/en/tutorials/webrtc/basics/](http://www.html5rocks.com/en/tutorials/webrtc/basics/)
+* [http://www.webrtc.org/](http://www.webrtc.org/)
+* [http://www.html5rocks.com/en/tutorials/webrtc/basics/](http://www.html5rocks.com/en/tutorials/webrtc/basics/)
 
 ## Audio / optical pairing and communication
 
@@ -377,15 +378,15 @@ For flashing lights, electric Imp is the most well known. More generally it's ca
 
 ### References:
 
-[http://en.wikipedia.org/wiki/Frequency-shift_keying](http://en.wikipedia.org/wiki/Frequency-shift_keying)
-[http://www.ics.uci.edu/~lopes/dv/dv.html](http://www.ics.uci.edu/~lopes/dv/dv.html)
-[http://wiki.foaf-project.org/w/DanBri/ChirpChirp](http://wiki.foaf-project.org/w/DanBri/ChirpChirp)
-[http://chirp.io/tech/](http://chirp.io/tech/)
-[http://chirp.io/tech/#sthash.8x6ypBMA.dpuf](http://chirp.io/tech/#sthash.8x6ypBMA.dpuf)
-[https://github.com/Katee/quietnet](https://github.com/Katee/quietnet)
-[http://smus.com/ultrasonic-networking/](http://smus.com/ultrasonic-networking/)
-[http://electricimp.com](http://electricimp.com)
-[http://www.researchgate.net/publication/220144443_Indoor_optical_wireless_communication_potential_and_state-of-the-art/file/79e4150cb19442f72a.pdf](http://www.researchgate.net/publication/220144443_Indoor_optical_wireless_communication_potential_and_state-of-the-art/file/79e4150cb19442f72a.pdf)
+* [http://en.wikipedia.org/wiki/Frequency-shift_keying](http://en.wikipedia.org/wiki/Frequency-shift_keying)
+* [http://www.ics.uci.edu/~lopes/dv/dv.html](http://www.ics.uci.edu/~lopes/dv/dv.html)
+* [http://wiki.foaf-project.org/w/DanBri/ChirpChirp](http://wiki.foaf-project.org/w/DanBri/ChirpChirp)
+* [http://chirp.io/tech/](http://chirp.io/tech/)
+* [http://chirp.io/tech/#sthash.8x6ypBMA.dpuf](http://chirp.io/tech/#sthash.8x6ypBMA.dpuf)
+* [https://github.com/Katee/quietnet](https://github.com/Katee/quietnet)
+* [http://smus.com/ultrasonic-networking/](http://smus.com/ultrasonic-networking/)
+* [http://electricimp.com](http://electricimp.com)
+* [http://www.researchgate.net/publication/220144443_Indoor_optical_wireless_communication_potential_and_state-of-the-art/file/79e4150cb19442f72a.pdf](http://www.researchgate.net/publication/220144443_Indoor_optical_wireless_communication_potential_and_state-of-the-art/file/79e4150cb19442f72a.pdf)
 
 ## NFC
 
@@ -398,8 +399,8 @@ Active communication mode: Both initiator and target device communicate by alter
 
 ### References
 
-[http://en.wikipedia.org/wiki/Near_field_communication](http://en.wikipedia.org/wiki/Near_field_communication)
-[http://en.wikipedia.org/wiki/ISO/IEC_15693](http://en.wikipedia.org/wiki/ISO/IEC_15693)
+* [http://en.wikipedia.org/wiki/Near_field_communication](http://en.wikipedia.org/wiki/Near_field_communication)
+* [http://en.wikipedia.org/wiki/ISO/IEC_15693](http://en.wikipedia.org/wiki/ISO/IEC_15693)
 
 ## Bluetooth Secure Simple Pairing (SSP) using NFC
 
@@ -408,8 +409,8 @@ Devices that comply with [BLUETOOTH_CORE] and subsequent versions use Secure Sim
 
 ### References
 
-[http://members.nfc-forum.org/resources/AppDocs/NFCForum_AD_BTSSP_1_0.pdf](http://members.nfc-forum.org/resources/AppDocs/NFCForum_AD_BTSSP_1_0.pdf)
-[https://www.bluetooth.org/DocMan/handlers/DownloadDoc.ashx?doc_id=282159](https://www.bluetooth.org/DocMan/handlers/DownloadDoc.ashx?doc_id=282159)
+* [http://members.nfc-forum.org/resources/AppDocs/NFCForum_AD_BTSSP_1_0.pdf](http://members.nfc-forum.org/resources/AppDocs/NFCForum_AD_BTSSP_1_0.pdf)
+* [https://www.bluetooth.org/DocMan/handlers/DownloadDoc.ashx?doc_id=282159](https://www.bluetooth.org/DocMan/handlers/DownloadDoc.ashx?doc_id=282159)
 
 ## XMPP
 
@@ -458,7 +459,7 @@ Another extension [http://xmpp.org/extensions/xep-0060.html](http://xmpp.org/ext
 
 ### References
 
-[http://xmpp.org/](http://xmpp.org/)
-[http://xmpp.org/rfcs/rfc6120.html](http://xmpp.org/rfcs/rfc6120.html)
-[http://xmpp.org/xmpp-protocols/xmpp-extensions/](http://xmpp.org/xmpp-protocols/xmpp-extensions/)
+* [http://xmpp.org/](http://xmpp.org/)
+* [http://xmpp.org/rfcs/rfc6120.html](http://xmpp.org/rfcs/rfc6120.html)
+* [http://xmpp.org/xmpp-protocols/xmpp-extensions/](http://xmpp.org/xmpp-protocols/xmpp-extensions/)
 
