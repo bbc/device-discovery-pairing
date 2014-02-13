@@ -7,7 +7,7 @@ This is an initial literature review, starting from the state of the art as desc
 
 The goal is to provide a short overview of some of the previous work in this area, which we can use to focus our efforts.
 
-Discovery and pairing are closely connected, since the purpose of discovery is to find a service, device or application to connect or pair to. Pairing itself then has particular characteristics, discussed later. I also provide brief summaries and links for various technologies I've looked at in this area. [a]
+Discovery and pairing are closely connected, since the purpose of discovery is to find a service, device or application to connect or pair to. Pairing itself then has particular characteristics, discussed later. We also provide brief summaries and links for various technologies I've looked at in this area. [a]
 
 ## Discovery / pairing Overview
 
@@ -217,7 +217,7 @@ It contains some useful worked-through examples as Javascript.
 
 > "Webinos is an EU funded project aiming to deliver a platform for web applications across mobile, PC, home media (TV) and in-car devices."
 
-The most interesting aspect I found was the architecture document, which is worth [http://www.webinos.org/content/html/D033/Architecture_Overview.htm](reading in full). 
+The most interesting aspect we found was the architecture document, which is worth [http://www.webinos.org/content/html/D033/Architecture_Overview.htm](reading in full). 
 
 It has the concept of a 'personal zone': 
 
@@ -289,7 +289,7 @@ This describes only part of the specification, which is currently a work in prog
 
 The goal is for a device such as a radio to be paired with an online account. In some ways it's similar to RadioTAG but with fewer user interaction steps, simplifying things for the user.
 
-I include it here because although it's a slightly different aspect of pairing which will be covered elsewhere in the project, it shows a secure way to pair devices.
+We include it here because although it's a slightly different aspect of pairing which will be covered elsewhere in the project, it shows a secure way to pair devices.
 
 The basic flow is:
 * the device requests a token
@@ -372,7 +372,7 @@ Audio or flashing light can be used as a means of out of band token-passing inst
 
 For audio, it's known as "Frequency Shift Keying" - a way to map characters to frequencies, which can be audible or not.
 
-The basic idea has been around for a long time: it's the way that modems work. There's been some recent work in this area: digital voices, Chirp, quietnet and others. We did some initial exploration in the NoTube project, which I have picked up again recently for Radiodan in W3C's web audio API ("Beep"). NFC can use frequency shift keying as well as Amplitude shift keying, but is non-audible.
+The basic idea has been around for a long time: it's the way that modems work. There's been some recent work in this area: digital voices, Chirp, quietnet and others. We did some initial exploration in the NoTube project, which we have picked up again recently for Radiodan in W3C's web audio API ("Beep"). NFC can use frequency shift keying as well as Amplitude shift keying, but is non-audible.
 
 For flashing lights, electric Imp is the most well known. More generally it's called "Optical Wireless Communication".
 
