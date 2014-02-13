@@ -7,7 +7,7 @@ This is an initial literature review, starting from the state of the art as desc
 
 The goal is to provide a short overview of some of the previous work in this area, which we can use to focus our efforts.
 
-Discovery and pairing are closely connected, since the purpose of discovery is to find a service, device or application to connect or pair to. Pairing itself then has particular characteristics, discussed later. We also provide brief summaries and links for various technologies I've looked at in this area. [a]
+Discovery and pairing are closely connected, since the purpose of discovery is to find a service, device or application to connect or pair to. Pairing itself then has particular characteristics, discussed later. We also provide brief summaries and links for various technologies I've looked at in this area. 
 
 ## Discovery / pairing Overview
 
@@ -15,7 +15,7 @@ We've identified three different models of discovery / pairing:
 
 ### 1. Enabling services to find each other on a given local network
 
-UPnP and mDNS are two common techniques[b][c] for discovering media services on a local network. This process is typically characterised as discovering services rather than devices: devices may contain one or more services. In both these cases services on a network make themselves findable, and other services can find them with broadcast queries, following up with more specific queries to a particular service, and the possibility of controlling or getting information from them. "Pairing" is simply a matter of communicating.
+UPnP and mDNS are two common techniques for discovering media services on a local network. This process is typically characterised as discovering services rather than devices: devices may contain one or more services. In both these cases services on a network make themselves findable, and other services can find them with broadcast queries, following up with more specific queries to a particular service, and the possibility of controlling or getting information from them. "Pairing" is simply a matter of communicating.
 
 Key features are:
 
@@ -32,9 +32,9 @@ Typical issues are:
 * Some LANs (e.g. in public settings, such as hotels) are configured to prevent direct peer to peer routing of IP packets, thereby preventing local discovery
 * Some LANs require you to authenticate yourself via a web page before granting the device access to other than the gateway, this can’t be done for devices that don’t support a web browser
 
-### 2. Linking devices, assuming they are connected to the internet[d][e]
+### 2. Linking devices, assuming they are connected to the internet
 
-A different characterisation of discovery / pairing is in the context of devices on different networks connected by the internet. At its simplest level this is about placing an entry in an internet connected remote database[f] linking the identifiers for two services or devices, and then allowing them to communicate using this remote mechanism.[g] Examples are HBBTV second screen framework from FI content, and some kinds of synchronised second screen applications such as those developed in NoTube and P2PNext. The "discovery" part is the out of band means of passing identifiers between the devices.
+A different characterisation of discovery / pairing is in the context of devices on different networks connected by the internet. At its simplest level this is about placing an entry in an internet connected remote database linking the identifiers for two services or devices, and then allowing them to communicate using this remote mechanism. Examples are HBBTV second screen framework from FI content, and some kinds of synchronised second screen applications such as those developed in NoTube and P2PNext. The "discovery" part is the out of band means of passing identifiers between the devices.
 
 Key features are:
 
