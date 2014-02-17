@@ -397,10 +397,25 @@ NFC can be used for service initiation (which could be in the role of a QR code 
 > "Passive communication mode: The initiator device provides a carrier field and the target device answers by modulating the existing field. In this mode, the target device may draw its operating power from the initiator-provided electromagnetic field, thus making the target device a transponder.
 Active communication mode: Both initiator and target device communicate by alternately generating their own fields. A device deactivates its RF field while it is waiting for data. In this mode, both devices typically have power supplies."
 
+The W3C draft [Web NFC API](http://www.w3.org/TR/nfc/) provides access to NFC from browser clients. The API permits Web pages to read and write NFC tags, to send and receive messages between NFC devices, and to handover to WiFi or Bluetooth.
+
+> A NFC tag is a passive, unpowered NFC device. The NFC tag is powered by magnetic induction when an active NFC device is in close vicinity. A NFC tag contains a single NDEF message.
+
+> A NDEF message encapsulates one or more application-defined NDEF records. NDEF stands for NFC Forum Data Exchange Format, a lightweight binary message format. NDEF messages can be stored on a NFC tag or exchanged between NFC-enabled devices.
+
+> Here are some possible use cases:
+> * Tap to Play: tap your device to another to play a peer-to-peer game, using the NFCPeer interface to exchange NDEF messages.
+> * Tap to Share: tap to share some data, e.g. coupons, contacts, using the NFCPeer interface to exchange NDEF messages.
+> * Tap to Control: tap to control another device, like a TV remote, using the "handover" capability of the NFCPeer interface.
+> * Tap to Connect: tap to connect via WiFi or Bluetooth, using the "handover" capability of the NFCPeer interface.
+> * Tap to Read: tap to read NFC tags, using the NFCTag interface.
+> * Tap to Write: tap to write NFC tags, using the NFCTag interface.
+
 ### References
 
 * [http://en.wikipedia.org/wiki/Near_field_communication](http://en.wikipedia.org/wiki/Near_field_communication)
 * [http://en.wikipedia.org/wiki/ISO/IEC_15693](http://en.wikipedia.org/wiki/ISO/IEC_15693)
+* [http://www.w3.org/TR/nfc/](http://www.w3.org/TR/nfc/)
 
 ## Bluetooth Secure Simple Pairing (SSP) using NFC
 
