@@ -217,7 +217,7 @@ It contains some useful worked-through examples as Javascript.
 
 > "Webinos is an EU funded project aiming to deliver a platform for web applications across mobile, PC, home media (TV) and in-car devices."
 
-The most interesting aspect we found was the architecture document, which is worth [http://www.webinos.org/content/html/D033/Architecture_Overview.htm](reading in full). 
+The most interesting aspect we found was the architecture document, which is worth [reading in full](http://www.webinos.org/content/html/D033/Architecture_Overview.htm).
 
 It has the concept of a 'personal zone': 
 
