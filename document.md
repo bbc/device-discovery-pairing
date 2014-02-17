@@ -329,15 +329,15 @@ Uses mDNS on the local network, with a known prefix
 
 ## DIAL
 
-> "DIAL (for DIscovery And Launch) is a protocol that 2nd screen (e.g., tablet, phone) devices can use to discover and launch apps on 1st screen (e.g., TV, set-top box, Blu-ray player) devices. It was originally developed by Netflix.
+DIAL (for DIscovery And Launch) is a protocol that 2nd screen (e.g., tablet, phone) devices can use to discover and launch apps on 1st screen (e.g., TV, set-top box, Blu-ray player) devices. It was originally developed by Netflix.
 
-> DIAL maintains a centralized registry for (1st screen) application names and name-prefixes. The BBC has registered the names "iPlayer", "News", "Sport", "ConnectedRedButton", as well as the prefixes "com.bbc" and "uk.co.bbc".
+DIAL maintains a centralized registry for (1st screen) application names and name-prefixes. The BBC has registered the names "iPlayer", "News", "Sport", "ConnectedRedButton", as well as the prefixes "com.bbc" and "uk.co.bbc".
 
-> The DIAL protocol has two components: DIAL Service Discovery and DIAL REST Service.
+The DIAL protocol has two components: DIAL Service Discovery and DIAL REST Service.
 
-> The DIAL Service Discovery protocol is based on SSDP (Simple Service Discovery Protocol) version 1.1 as defined in UPnP and HTTP.
+The DIAL Service Discovery protocol is based on SSDP (Simple Service Discovery Protocol) version 1.1 as defined in UPnP and HTTP.
 
-> The DIAL REST Service provides means of starting and stopping applications on the 1st screen, and getting information about available applications, such as name, state (running/stopped)."
+The DIAL REST Service provides means of starting and stopping applications on the 1st screen, and getting information about available applications, such as name, state (running/stopped).
 
 ### References
 
