@@ -91,7 +91,7 @@ So far we have looked at:
 * UPnP
 * DNS-SD/mDNS
 * Web intents
-* Javascript discovery API
+* W3C Network Service Discovery
 * Webinos
 * QR codes / MHEG (internal R&D paper)
 * IRT second screen framework for HbbTV (from the FI-Content project)
@@ -170,20 +170,18 @@ The key difference to point out between UPnP and Zeroconf is that Zeroconf does 
 
 Currently discontinued: “The Web Intents Addendum defines how Web Intent may be used to discover services on a local network. Work on this specification has been discontinued since the Web Intent specification has been published as a W3C Working Group Note indicating no further development on the Recommendation track at this time.”
 
-### Reference: 
+### Reference:
 
 * [http://www.w3.org/TR/webintents-local-services/](http://www.w3.org/TR/webintents-local-services/)
 * [http://lists.w3.org/Archives/Public/public-device-apis/2013Mar/0023.html](http://lists.w3.org/Archives/Public/public-device-apis/2013Mar/0023.html)
 
-## JavaScript discovery API
+## W3C Network Service Discovery
 
-This is a work in progress, defining an interface for javascript to access UPnP, Zeroconf or DIAL from within javascript in a webpage.
+This is a work in progress, defining an interface for accessing UPnP, Zeroconf or DIAL from within JavaScript in a web page.
 
 The idea is that the web page can get access to local services using a number of well-used protocols: these provide promise-based access to APIs for control and feedback to and from locally networked devices. It just covers the discovery part - once the services and devices are discovered, you use whatever APIs those specific services support to communicate with them (so for example, UPnP mandates SOAP, while other types of services may use REST).
 
-
 Example of requesting either a DNS-SD or UPnP advertised service from the reference:
-
 
     function showServices( services ) {
       // Show a list of all the services provided to the web page (+ service type)
@@ -191,12 +189,10 @@ Example of requesting either a DNS-SD or UPnP advertised service from the refere
         console.log( services[i].name + '(' + services[i].type + ')' );
     }
 
- 
     navigator.getNetworkServices([
       'zeroconf:_boxee-jsonrpc._tcp',
       'upnp:urn:schemas-upnp-org:service:ContentDirectory:1'
     ]).then(showServices);
-
 
 It notes some security considerations:
 
