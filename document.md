@@ -1,13 +1,14 @@
 # Discovery and Pairing Literature Review for MediaScape
+
 ## Libby Miller, Chris Needham
 
 *Thanks to Matt Hammond for valuable comments and corrections.*
 
-This is an initial literature review, starting from the state of the art as described in the MediaScape description of work, and covering, briefly, discovery techniques used by UPnP, MDNS, and various applications that use them, such as Chromecast, Airplay and more experimental techniques. It also looks at techniques used in NFC and Bluetooth, and various approaches for out-of-band linking of devices. It touches on various W3C and other specifications which are taking some of this work to the Web.
+This is an initial literature review, starting from the state of the art as described in the MediaScape description of work, and covering, briefly, discovery techniques used by UPnP, mDNS, and various applications that use them, such as Chromecast, Airplay and more experimental techniques. It also looks at techniques used in NFC and Bluetooth, and various approaches for out-of-band linking of devices. It touches on various W3C and other specifications which are taking some of this work to the Web.
 
 The goal is to provide a short overview of some of the previous work in this area, which we can use to focus our efforts.
 
-Discovery and pairing are closely connected, since the purpose of discovery is to find a service, device or application to connect or pair to. Pairing itself then has particular characteristics, discussed later. We also provide brief summaries and links for various technologies I've looked at in this area. 
+Discovery and pairing are closely connected, since the purpose of discovery is to find a service, device or application to connect or pair to. Pairing itself then has particular characteristics, discussed later. We also provide brief summaries and links for various technologies I've looked at in this area.
 
 ## Discovery / pairing Overview
 
@@ -29,12 +30,12 @@ Typical issues are:
 * persistence / cache control (are the devices still there? how do we tell when they have gone, and how quickly do we know and need to know?)
 * matching and interoperability (you'll be searching for a specific type of service so we end up with registries of prefixes; once you know about them you need to find out more and then control them so you need to know how to do that - often / usually externally defined APIs are used for that)
 * security - typically the LAN will be a trusted environment and as soon as you step out of the LAN, security problems emerge (c.f. UPnP-enabled routers)
-* Some LANs (e.g. in public settings, such as hotels) are configured to prevent direct peer to peer routing of IP packets, thereby preventing local discovery
-* Some LANs require you to authenticate yourself via a web page before granting the device access to other than the gateway, this can’t be done for devices that don’t support a web browser
+* some LANs (e.g. in public settings, such as hotels) are configured to prevent direct peer to peer routing of IP packets, thereby preventing local discovery
+* some LANs require you to authenticate yourself via a web page before granting the device access to other than the gateway, this can’t be done for devices that don’t support a web browser
 
 ### 2. Linking devices, assuming they are connected to the internet
 
-A different characterisation of discovery / pairing is in the context of devices on different networks connected by the internet. At its simplest level this is about placing an entry in an internet connected remote database linking the identifiers for two services or devices, and then allowing them to communicate using this remote mechanism. Examples are HBBTV second screen framework from FI content, and some kinds of synchronised second screen applications such as those developed in NoTube and P2PNext. The "discovery" part is the out of band means of passing identifiers between the devices.
+A different characterisation of discovery / pairing is in the context of devices on different networks connected by the internet. At its simplest level this is about placing an entry in an internet connected remote database linking the identifiers for two services or devices, and then allowing them to communicate using this remote mechanism. Examples are HbbTV second screen framework from FI-Content, and some kinds of synchronised second screen applications such as those developed in NoTube and P2PNext. The "discovery" part is the out of band means of passing identifiers between the devices.
 
 Key features are:
 
@@ -53,14 +54,14 @@ Typical issues are:
 
 ### 3. Enabling devices in close physical proximity to find each other and initiate communication
 
-A final sense of discovery and pairing is where devices identify other devices of a similar type using electromagnetic waves or signalling on a specific frequency, and use this to create or bootstrap a piconet, or small ad-hoc network. NFC (Near Field Communication, an extension of RFID) and Bluetooth work like this. 
+A final sense of discovery and pairing is where devices identify other devices of a similar type using electromagnetic waves or signalling on a specific frequency, and use this to create or bootstrap a piconet, or small ad-hoc network. NFC (Near Field Communication, an extension of RFID) and Bluetooth work like this.
 
 Key features are:
 
 * connecting powerless or low-power devices
 * physical proximity requirement for operation
 
-Such a piconet can be used to bootstrap a wider, web-based communication mechanism. Because NFC can be such short range, it is very selective and requires user intention to bring the objects into proximity. It can therefore be used as the means to determine permission / intent from the user to establish pairing before communication then begins over a longer range medium (e.g. wifi, bluetooth, internet)
+Such a piconet can be used to bootstrap a wider, web-based communication mechanism. Because NFC can be such short range, it is very selective and requires user intention to bring the objects into proximity. It can therefore be used as the means to determine permission / intent from the user to establish pairing before communication then begins over a longer range medium (e.g. wifi, Bluetooth, internet)
 
 ## Pairing
 
@@ -78,7 +79,7 @@ Pairing devices is really pairing of services and control points which can both 
 
 ### 2. Communications transport
 
-Pairing uses a network for communication between the paired items. This could be an existing network that they are both already connected to (LAN or internet), or an induced network  (NFC, Bluetooth). It may include elements of out of band communication, via human-mediated data input, or audio or optical communication. The out of band communication may be necessary for security purposes.
+Pairing uses a network for communication between the paired items. This could be an existing network that they are both already connected to (LAN or internet), or an induced network (NFC, Bluetooth). It may include elements of out of band communication, via human-mediated data input, or audio or optical communication. The out of band communication may be necessary for security purposes.
 
 ### 3. Protocol
 
@@ -96,11 +97,12 @@ So far we have looked at:
 * QR codes / MHEG (internal R&D paper)
 * IRT second screen framework for HbbTV (from the FI-Content project)
 * RadioDNS / RadioTAG
-* EBU Cross-Platform Authentication
+* ETSI Cross-Platform Authentication
+* OAuth 2.0 Device Flow for Browserless and Input Constrained Devices
 * Google's AnyMote Protocol
 * DIAL
 * Chromecast
-* Webrtc
+* WebRTC
 * Audio and flashing mechanisms for connecting devices
 * NFC
 * Bluetooth
@@ -108,7 +110,7 @@ So far we have looked at:
 
 We haven't gone into a great deal of depth for any of these. Hopefully the summary and links to further content provide a starting point for further research / implementation.
 
-### UPnP
+## UPnP
 
 > "Universal Plug and Play (UPnP) enables discovery and control of devices, including networked devices and services, such as network-attached printers, Internet gateways, and consumer electronics equipment"
 
@@ -126,13 +128,13 @@ A device will provide a “service description” xml document that lists all th
 
 It is assumed that communications on the local network are secure. The main issue with security and hence the need for authentication, comes from access outside the local network, e.g. NAT traversal.
 
-### References: 
+### References:
 
 * [http://www.upnp.org/specs/arch/UPnP-arch-DeviceArchitecture-v1.1.pdf](http://www.upnp.org/specs/arch/UPnP-arch-DeviceArchitecture-v1.1.pdf)
 * [http://en.wikipedia.org/wiki/Universal_Plug_and_Play](http://en.wikipedia.org/wiki/Universal_Plug_and_Play)
 * [http://www.upnp.org/download/UPNP_understandingUPNP.doc](http://www.upnp.org/download/UPNP_understandingUPNP.doc)
 
-## DNS-SD/mDNS 
+## DNS-SD/mDNS
 
 This is sometimes known as Zeroconf service discovery, and is the basis of Apple’s Airplay discovery mechanism.
 
@@ -165,7 +167,6 @@ The key difference to point out between UPnP and Zeroconf is that Zeroconf does 
 
 * [http://tools.ietf.org/html/rfc6763](http://tools.ietf.org/html/rfc6763)
 
-
 ## W3C Web intents
 
 Currently discontinued: “The Web Intents Addendum defines how Web Intent may be used to discover services on a local network. Work on this specification has been discontinued since the Web Intent specification has been published as a W3C Working Group Note indicating no further development on the Recommendation track at this time.”
@@ -177,9 +178,11 @@ Currently discontinued: “The Web Intents Addendum defines how Web Intent may b
 
 ## W3C Network Service Discovery
 
-This is a work in progress, defining an interface for accessing UPnP, Zeroconf or DIAL from within JavaScript in a web page.
+This specification defines an interface for accessing UPnP, Zeroconf or DIAL from within JavaScript in a web page.
 
 The idea is that the web page can get access to local services using a number of well-used protocols: these provide promise-based access to APIs for control and feedback to and from locally networked devices. It just covers the discovery part - once the services and devices are discovered, you use whatever APIs those specific services support to communicate with them (so for example, UPnP mandates SOAP, while other types of services may use REST).
+
+Work on this specification has been discuntinued due to security and privacy concerns. For reference, a [previous version](https://www.w3.org/TR/2014/WD-discovery-api-20140220/) of the document contains the details.
 
 Example of requesting either a DNS-SD or UPnP advertised service from the reference:
 
@@ -203,11 +206,14 @@ Security and privacy:
 *  one api element at a time
 *  or a prearranged relationship
 
-It contains some useful worked-through examples as Javascript.
+It contains some useful worked-through examples as JavaScript.
 
-### Reference
+### References
 
-* [http://www.w3.org/TR/discovery-api/](http://www.w3.org/TR/discovery-api/) (Working Draft)
+* [https://www.w3.org/TR/discovery-api/](https://www.w3.org/TR/discovery-api/) (Working Group Note)
+* [https://www.w3.org/TR/2014/WD-discovery-api-20140220/][https://www.w3.org/TR/2014/WD-discovery-api-20140220/] (Working Draft, now discontinued)
+* [https://lists.w3.org/Archives/Public/public-web-and-tv/2014Apr/0055.html](https://lists.w3.org/Archives/Public/public-web-and-tv/2014Apr/0055.html)
+* [https://lists.w3.org/Archives/Public/public-web-and-tv/2014Jun/0005.html](https://lists.w3.org/Archives/Public/public-web-and-tv/2014Jun/0005.html)
 
 ## Webinos
 
@@ -215,7 +221,7 @@ It contains some useful worked-through examples as Javascript.
 
 The most interesting aspect we found was the architecture document, which is worth [reading in full](http://www.webinos.org/content/html/D033/Architecture_Overview.htm).
 
-It has the concept of a 'personal zone': 
+It has the concept of a 'personal zone':
 
 > "Devices in an NFC area, a personal area network (PAN) or a local area network (LAN) are regarded local, no matter what kind of bearers they are using.
 
@@ -271,17 +277,17 @@ RadioTAG is a pairing mechanism for an online account and a device (a radio). It
 * the user registers with the website and input token
 * they get a pin back and input that into device
 
-### References: 
+### References:
 
 * [http://radiodns.org/documentation/rdns01-1-0-0/](http://radiodns.org/documentation/rdns01-1-0-0/)
 * [http://radiotag.prototyping.bbc.co.uk/docs/radiotag-api-proposal-v1.00.html](http://radiotag.prototyping.bbc.co.uk/docs/radiotag-api-proposal-v1.00.htm)
 * [http://tools.ietf.org/html/draft-recordon-oauth-v2-device-00](http://tools.ietf.org/html/draft-recordon-oauth-v2-device-00)
 
-## Cross-Platform Authentication
+## ETSI Cross-Platform Authentication
 
-This is the Cross-Platform Authentication specification currently being developed by the EBU Project Group TVP-CPA.
+This is the Cross-Platform Authentication specification developed by the EBU Project Group TVP-CPA.
 
-This describes only part of the specification, which is currently a work in progress. This part is about authorising a device to access a web service, using the passing of a code between devices by an end user.
+This describes only part of the specification. This part is about authorising a device to access a web service, using the passing of a code between devices by an end user, and is similar to the OAuth 2.0 Device Flow for Browserless and Input Constrained Devices.
 
 The goal is for a device such as a radio to be paired with an online account. In some ways it's similar to RadioTAG but with fewer user interaction steps, simplifying things for the user.
 
@@ -298,7 +304,15 @@ The basic flow is:
 ### References
 
 * [https://tech.ebu.ch/groups/CPA](https://tech.ebu.ch/groups/CPA)
-* [https://github.com/ebu/cpa-spec/blob/draft-1.0/specification.md](https://github.com/ebu/cpa-spec/blob/draft-1.0/specification.md) (private github repo)
+* [ETSI TS TS 103 407, Cross Platform Authentication for limited input hybrid consumer equipment](http://www.etsi.org/deliver/etsi_ts/103400_103499/103407/01.01.01_60/ts_103407v010101p.pdf)
+
+## OAuth 2.0 Device Flow for Browserless and Input Constrained Devices
+
+This is an OAuth 2.0 flow for limted input capability devices. The flow is the same as used in EBU Cross Platform Authentication.
+
+### References
+
+* [https://datatracker.ietf.org/doc/draft-ietf-oauth-device-flow/](https://datatracker.ietf.org/doc/draft-ietf-oauth-device-flow/)
 
 ## Google TV Pairing Protocol
 
@@ -314,7 +328,7 @@ Essentially: there's an exchange of capabilities, then a secret is sent out of b
 
 ## Anymote Device discovery phase
 
-Uses mDNS on the local network, with a known prefix
+Uses mDNS on the local network, with a known prefix.
 
 > "The remote applications establish a pairing session with Pairing service following the Pairing Protocol. The Pairing service runs on the next consecutive port of the Anymote service. For example, If Google TV Anymote service announces itself at port 9551 then the Pairing service listens on 9552. The client should connect to the next consecutive port of Anymote service to set up the pairing session."
 
@@ -349,7 +363,7 @@ Chromecast uses DIAL for setup. You can see a walk-through of the whole process:
 
 * [http://forum.xda-developers.com/showpost.php?p=48350742&postcount=2](http://forum.xda-developers.com/showpost.php?p=48350742&postcount=2)
 
-## WebRTC
+## WebRTC
 
 This is for video and audio chat within the browser. It doesn't have any explicit discovery mechanisms per se.
 
@@ -384,7 +398,7 @@ For flashing lights, electric Imp is the most well known. More generally it's ca
 * [http://electricimp.com](http://electricimp.com)
 * [http://www.researchgate.net/publication/220144443_Indoor_optical_wireless_communication_potential_and_state-of-the-art/file/79e4150cb19442f72a.pdf](http://www.researchgate.net/publication/220144443_Indoor_optical_wireless_communication_potential_and_state-of-the-art/file/79e4150cb19442f72a.pdf)
 
-## NFC
+## NFC
 
 NFC can be used for service initiation (which could be in the role of a QR code as above), or for bypassing some of the complexity of bluetooth pairing (see below).
 
@@ -439,7 +453,7 @@ XMPP defines several core protocol methods:
 
 The purpose of XMPP is to enable the exchange of relatively small pieces of structured data (called "XML stanzas") over a network between any two (or more) entities.
 XMPP is typically implemented using a distributed client-server architecture, where a client needs to connect to a server in order to gain access to the network and thus be allowed to exchange XML stanzas with other entities (which can be associated with other servers).
-  
+
 The process whereby a client connects to a server, exchanges XML stanzas, and ends the connection is:
 
 1. Determine the IP address and port at which to connect, typically based on resolution of a fully qualified domain name
@@ -453,7 +467,7 @@ The process whereby a client connects to a server, exchanges XML stanzas, and en
 9. Close the TCP connection
 
 Because this architectural style involves ubiquitous knowledge of network availability and a conceptually unlimited number of concurrent information transactions in the context of a given client-to-server or server-to-server session, we label it "Availability for Concurrent Transactions" (ACT) to distinguish it from the "Representational State Transfer" (REST) architectural style familiar from the World Wide Web.
-  
+
 Although the architecture of XMPP is similar to that of email, it introduces several modifications to facilitate communication in close to real time. End-to-end communication in XMPP is logically peer-to-peer but physically client-to-server-to-server-to-client.
 The salient features of this ACTive architectural style are as follows:
 
